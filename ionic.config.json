@@ -1,0 +1,7 @@
+{
+  "name": "CoachTime",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
