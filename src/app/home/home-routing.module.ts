@@ -4,8 +4,24 @@ import { HomePage } from './home.page';
 
 const routes: Routes = [
   {
+    path: 'home',
+    redirectTo: 'home',
+    pathMatch: 'full',
+  },
+  {
     path: '',
     component: HomePage,
+    children: [
+      {
+        path: '',
+        pathMatch: 'full',
+        redirectTo: 'home',
+      },
+      {
+        path: 'home',
+        component:HomePage
+      }
+    ]
   }
 ];
 

@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div class="register-container">
+    <div class="logo">
+      <h1>
+        <ion-text>Logo</ion-text>
+      </h1>
+    </div>
+    <form [formGroup]="loginForm" (ngSubmit)="login()">
+      <div class="inputs">
+        <ion-item class="custom-input">
+          <ion-input type="text" formControlName="email" placeholder="Enter email"></ion-input>
+        </ion-item>
+        <ion-item class="custom-input">
+          <ion-input type="text" formControlName="password" placeholder="Enter passsword"></ion-input>
+        </ion-item>
+      </div>
+      <div class="button">
+            <ion-button type="submit" expand="block">Login</ion-button>
+      </div>
+      <div class="login-text">
+           <ion-text>Don't have an account? <span (click)="toRegister()">Register</span></ion-text>
+      </div>
+    </form>
+    
+  </div>
+</ion-content>
